@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="/assets/main.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+<body class="template-{{ page.layout }}">
+  {% include header.html %}
+  {{ content }}
+  {% include footer.html %}
+</body>
+</html>

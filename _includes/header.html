@@ -1,0 +1,28 @@
+{% if page.picture != null %}
+  <header class="cover" style="background-image: url({{page.picture}})">
+{% elsif layout.picture != null %}
+  <header class="cover" style="background-image: url({{layout.picture}})">
+{% else %}
+  <header>
+{% endif %}
+  {% if page.layout != 'home' %}
+    <nav>
+      <a class="button back" href="{{ site.url }}">На главную</a>
+      <a class="button back" href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </nav>
+  {% endif %}
+  {% if page.layout == 'home' %}
+    <article class="me post">
+      <img alt="Денис Бородин" src="https://s.gravatar.com/avatar/2aa3a44263bb36abc5fcf6c2ec3b4571?s=256">
+      <div>
+        <h1><span>Денис Бородин</span></h1>
+        <p>Привет, я фронтенд разработчик. Верстаю и программирую сайты и веб сервисы.</p>
+        <nav>
+          <a class="button" href="{{ '/about' | relative_url }}" >Обо мне</a>
+          <a class="button back" href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        </nav>
+      </div>
+    </article>
+  {% endif %}
+</header>
+
